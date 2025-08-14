@@ -1,0 +1,7 @@
+baseURL = 'https://buda-base.github.io/blog/'
+languageCode = 'en-us'
+title = 'BDRC tech news'
+theme = "mainroad"
+
+[params]
+  description = "BDRC tech news"
