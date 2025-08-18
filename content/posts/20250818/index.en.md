@@ -1,11 +1,11 @@
 +++
-date = '2025-08-14T10:52:53+02:00'
+date = '2025-08-18T10:52:53+02:00'
 draft = false
 title = 'Report from the digital field: archeology and WordPerfect 3.5'
 tags = ['fonts', 'OCR']
 slug = 'wordperfect-file-extraction'
 categories = ['fonts']
-image = "screenshot-basilisk.jpg"
+image = "thumbnail.png"
 #ShowShareButtons = true
 [params]
   author = ['Elie Roux']
@@ -13,21 +13,21 @@ image = "screenshot-basilisk.jpg"
   showtoc = true
   tocopen = true
 [[thumbnail]]
-  src = "screenshot-basilisk.jpg"
+  src = "thumbnail.png"
   visibility = ["list"]
 
 showToc = true
 [cover]
-    image = "screenshot-basilisk.jpg"
+    image = "thumbnail.png"
     caption = "It is still possible to run Corel WordPerfect 3.5 thanks to the amazing preservation work of Internet Archive"
 
-images = ["thumbnail.jpg"]
+images = ["thumbnail.png"]
 
 #cover = "cover.jpg"
 #thumbnail="posts/20250814/thubmnail.jpg"
 +++
 
-BDRC is always busy behind the scenes to foster a collaborative and passionate network of institutions and individuals providing practioners, scholars and translators with the material they need.
+BDRC is always active behind the scenes to foster a collaborative and passionate network of institutions and individuals providing practioners, scholars and translators with the material they need.
 
 The story of this blog post starts in the mid-1990s, when a project was undertaken by His Eminence Khochhen Tulku (b. 1937) in Dehradun to publish the Collected Works of the great master Terdak Lingpa (1646-1714). The project resulted in an impressive 16 volumes publication in 1998, scanned and put online in open access by BDRC under the number [MW22096](https://purl.bdrc.io/resource/MW22096).
 
@@ -35,7 +35,7 @@ BDRC then since OCRed the scans and put the OCR online. While the characters are
 - improving the layout detection on the Pecha format so that lines and margins are better handled
 - getting access to the original files so that the text can be directly extracted from them (see our work on the [PDF format](https://github.com/buda-base/py-tiblegenc)), as this always gives the best result
 
-Surprisingly, in that case, the original files from the mid-90s were preserved and a sample was sent to BDRC to explore its conversion into Unicode, which we will describe here.
+Surprisingly, in that case, the original files from the mid-90s were preserved and a sample was sent to BDRC to explore its conversion into Unicode, an entertaining week-end project that we will describe in the rest of this article.
 
 The file was produced using the `Tibetan!` system developed by Tony Duff, sitting on top of WordPerfect. It produces files in the WordPerfect file format with idiosyncratic conventions for pecha layout and pre-Unicode Tibetan typesetting. The file was likely produced on MACOS 7 using WordPerfect 3.5 released in 1996. 
 
@@ -61,4 +61,8 @@ So, after assigning a few Copilot agents to various tasks to modify the C++ code
 
 In the end, the changes needed were really small (just a few lines)... “The mountain labored and brought forth a mouse” as we would say in French...
 
-But that's not the end! The output is still in a pre-Unicode encoding and we now have to use the font to translate it into Unicode. Fortunately for the most part, the encoding is quite similar to the usual font encoding of the tools by Tony Duff, so the adaptation only took a few more hours.
+But that's not the end! The output is still in a pre-Unicode encoding and we now have to use the font to translate it into Unicode. Fortunately for the most part, the encoding is quite similar to the usual font encoding of the tools by Tony Duff, so the adaptation was not too difficult.
+
+Unfortunately, the Tibetan characters used to represent Sanskrit words and mantras do not follow the usual encoding and a mapping will have to be produced for them... The scans will help that task a lot but that will be for another day.
+
+We hope our work was helpful and that the entirety of this precious publication can be extracted and made available in the future!
