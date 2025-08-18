@@ -1,7 +1,54 @@
 baseURL = 'https://buda-base.github.io/blog/'
 languageCode = 'en-us'
 title = 'BDRC tech news'
-theme = "mainroad"
+#theme = ["PaperMod"]
+theme = ["PaperMod"]
 
 [params]
   description = "BDRC tech news"
+  defaultTheme = "light"
+  disableThemeToggle = true
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = true
+
+[params.logo]
+  image = "/blog/images/bdrc.svg"
+  title = "BDRC Tech News"
+
+[params.homeInfoParams]
+  Title = 'Tibetan and Buddhist Tech Updates'
+  Content = 'from the Buddhist Digital Resource Center'
+
+[[params.socialIcons]]
+  name = "facebook"
+  url = "https://www.facebook.com/BDRC.io"
+
+[[params.socialIcons]]
+  name = "web"
+  url = "https://library.bdrc.io"
+
+[params.widgets.social]
+  cached = true # activate cache if true
+  # Enable parts of social widget
+  facebook = "BDRC.io"
+  instagram = "buddhist_archive"
+  github = "buda-base"
+  email = "help@bdrc.io"
+
+[params.sharingbuttons]
+  facebook = true
+  twitter = true
+  email = true
