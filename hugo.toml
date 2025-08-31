@@ -40,6 +40,10 @@ theme = ["PaperMod"]
   name = "web"
   url = "https://library.bdrc.io"
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-FEE3EV1Y0R'
+
 [params.widgets.social]
   cached = true # activate cache if true
   # Enable parts of social widget
