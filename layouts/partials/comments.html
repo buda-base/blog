@@ -1,0 +1,20 @@
+{{- if eq .Section "posts" }}
+<noscript>Please enable JavaScript to view comments.</noscript>
+<div id="commento" data-lazy></div>
+<script>
+  (function () {
+    const el = document.querySelector('#commento[data-lazy]');
+    if (!el) return;
+    if (!('IntersectionObserver' in window)) { return load(); }
+    new IntersectionObserver((entries, obs) => {
+      if (entries.some(e => e.isIntersecting)) { obs.disconnect(); load(); }
+    }).observe(el);
+    function load() {
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://cdn.commento.io/js/commento.js';
+      document.body.appendChild(s);
+    }
+  })();
+</script>
+{{- end }}

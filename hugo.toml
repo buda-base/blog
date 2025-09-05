@@ -18,27 +18,24 @@ theme = ["PaperMod"]
   UseHugoToc = true
   disableSpecial1stPost = false
   disableScrollToTop = false
-  comments = false
+  comments = true
   hidemeta = false
   hideSummary = false
   showtoc = true
   tocopen = true
 
 [params.logo]
-  image = "/blog/images/bdrc.svg"
+  image = "bdrc.svg"
   title = "BDRC Tech News"
+
+# Logo configuration
+[params.label]
+  icon = "bdrc.svg"
+  iconHeight = 40
 
 [params.homeInfoParams]
   Title = 'Tibetan and Buddhist Tech Updates'
   Content = 'from the Buddhist Digital Resource Center'
-
-[[params.socialIcons]]
-  name = "facebook"
-  url = "https://www.facebook.com/BDRC.io"
-
-[[params.socialIcons]]
-  name = "web"
-  url = "https://library.bdrc.io"
 
 [services]
   [services.googleAnalytics]
