@@ -2,9 +2,9 @@
 date = '2025-09-01T10:52:53+02:00'
 draft = false
 title = 'A little app for sorting Tibetan alphabetically'
-tags = ['fonts', 'OCR']
+tags = []
 slug = 'tibetan-alphabetical-order'
-categories = ['fonts']
+categories = []
 #ShowShareButtons = true
 [params]
   author = ['Elie Roux']
@@ -33,7 +33,7 @@ Sorting Tibetan automatically is something that was worked on as early as the 19
 
 {{< figure
     src="Kuensel_English.jpg"
-    caption="Excerpt from the newspaper Kuensel, July 9 1988, picture kindly provided by Yoshiro Imaeda. The article mentions alphabetical order as a feature at the time."
+    caption="Excerpt from the Bhutanese newspaper Kuensel, July 9 1988, picture kindly provided by Yoshiro Imaeda. The article mentions alphabetical order as a feature at the time."
 >}}
 
 ### A solved problem?
@@ -42,7 +42,7 @@ Tibetan alphabetical order then remained a niche feature, with some specialized 
 
 Fast forward 33 years, the standard way for softwares to sort alphabetically is now to use the data from the [Common Locale Data Repository](https://cldr.unicode.org/). In 2021, BDRC contributed so-called collation rules for Tibetan[^2] and in theory solved the problem for everyone. The collation rules were shipped in all major software that can now sort in Tibetan!
 
-Except... that's unfortunately not the case. A good example of why not is the case of Chrome, which chooses to exclude Tibetan support to reduce the download size[^3]. Or LibreOffice, which is out of sync with the CLDR[^4].
+Except... that's unfortunately not the case. A good example of why not is the case of Chrome, which chooses to exclude Tibetan support to reduce the download size[^3]. Fortunately the collation rules made it in recent LibreOffice and can now be used, see the [dedicated blog post](../sorting-tibetan-in-libreoffice/).
 
 It thus seems to be the case that sorting Tibetan alphabetically will continue to require some specialized apps for some time, and we hope ours can fill the gap! We will continue to push for better Tibetan support in widely used software as much as we can.
 
