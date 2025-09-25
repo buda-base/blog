@@ -39,8 +39,11 @@ Let's take a real example: if we segment the excellent [Esukhia Derge Tengyur](h
 
 ```
 བྷྲྀཾ,20
+
 བྷྲྀཾ,3
+
 བྷྲྀཾ,1
+
 བྷྲཾྀ,1
 ```
 
@@ -48,8 +51,11 @@ For instance the same stack བྷྲྀཾ appeared as 4 different stacks on ou
 
 ```
 བྷྲྀཾ = 0F56 (བ) 0FB7 (◌ྷ ) 0FB2 (◌ྲ ) 0F80 (◌ྀ ) 0F7E (◌ཾ )
+
 བྷྲྀཾ = 0F57 (བྷ) 0FB2 (◌ྲ ) 0F80 (◌ྀ ) 0F7E (◌ཾ )
+
 བྷྲྀཾ = 0F57 (བྷ) 0F76 (◌ྲྀ ) 0F7E (◌ཾ )
+
 བྷྲཾྀ = 0F56 (བ) 0FB7 (◌ྷ ) 0FB2 (◌ྲ ) 0F7E (◌ཾ ) 0F80 (◌ྀ )
 ```
 
@@ -61,7 +67,7 @@ Let's dive into it by looking at the issues we identified during our project. If
 
 ## 1. Canonically Equivalent(ish) Unicode Forms
 
-#### NFC vs. NFD
+### NFC vs. NFD
 
 In the example we used above, we can see two variations:
 
@@ -76,7 +82,7 @@ See the Unicode website for [the 20 Tibetan characters that can have this variat
 
 For this case there is no right or wrong representation, but since the compositions are rare and difficult to make sense of, we use the decomposed form in our TUN code.
 
-#### The strange case of 0F00
+### The strange case of 0F00
 
 One equivalence of the exact same type is handled differently in Unicode[^4]:
 
@@ -90,7 +96,7 @@ Our TUN system normalizes all occurences to the decomposed form.
 
 ## 2. Graphical equivalent
 
-#### 0F62 / 0F65
+### 0F62 / 0F65
 
 Unicode has two characters to represent the letter ར: `0F62` and `0F65`. The difference between the two is subtle:
 
@@ -99,7 +105,7 @@ Unicode has two characters to represent the letter ར: `0F62` and `0F65`. The d
 
 One issue is that in many cases, the two Unicode characters lead to the exact same glyph, for instance པར can be represented as `0F54` (པ) `0F62` (ར) or `0F54` (པ) `0F65` (ཪ). Our TUN system thus changes `0F65` to `0F62` in all the cases where they are equivalent.
 
-#### More graphical variants
+### More graphical variants
 
 For OCR purposes, more graphical equivalent can be normalized, for instance
 - `0F0B` (་) ≅ `0F0C` (༌)
@@ -146,7 +152,7 @@ Our TUN system reorders characters sequences so that they follow the order:
 6. top marks (ex: `0F7E` ◌ཾ )
 7. right mark (ex: `0F7F` ◌ཿ )
 
-#### over-reordering?
+### over-reordering?
 
 As demonstrated in our previous example, the sequences `0F74` (◌ུ ) `0F71` (◌ཱ ) and `0F71` (◌ཱ ) `0F74` (◌ུ ) have no visual distinction on rendering. But does it mean we should canonicalize them for all tasks?
 
